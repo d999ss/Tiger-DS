@@ -69,7 +69,8 @@ h1, h2, h3, h4, h5, h6,
 /* Apply Alexandria to body text */
 body, p, span, div, a, button, input, textarea, select,
 .text-sm, .text-base, .text-lg,
-.font-normal, .font-medium {
+.font-normal, .font-medium,
+.text-foreground, .text-muted-foreground {
   font-family: var(--font-alexandria) !important;
 }
 
@@ -96,4 +97,24 @@ nav a, .inline-flex, button {
 /* Ensure proper font loading */
 .font-sans {
   font-family: var(--font-alexandria) !important;
+}
+
+/* Specific targeting for subtitle/description text */
+.text-balance, .max-w-3xl, .text-center p {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* Override any remaining text elements */
+* {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* Re-apply Neuropa to headlines after the universal selector */
+h1, h2, h3, h4, h5, h6,
+.text-4xl, .text-5xl, .text-6xl,
+.text-3xl, .text-2xl, .text-xl,
+.font-semibold, .font-bold,
+[class*="heading"], [class*="title"],
+.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
+  font-family: var(--font-neuropa) !important;
 }
