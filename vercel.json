@@ -1,0 +1,151 @@
+{
+  "rewrites": [
+    {
+      "source": "/colors",
+      "destination": "/colors.html"
+    },
+    {
+      "source": "/themes",
+      "destination": "/themes.html"
+    },
+    {
+      "source": "/blocks",
+      "destination": "/blocks.html"
+    },
+    {
+      "source": "/docs",
+      "destination": "/docs.html"
+    },
+    {
+      "source": "/docs/components",
+      "destination": "/docs/components.html"
+    },
+    {
+      "source": "/docs/installation",
+      "destination": "/docs/installation.html"
+    },
+    {
+      "source": "/docs/changelog",
+      "destination": "/docs/changelog.html"
+    },
+    {
+      "source": "/docs/figma",
+      "destination": "/docs/figma.html"
+    },
+    {
+      "source": "/docs/javascript",
+      "destination": "/docs/javascript.html"
+    },
+    {
+      "source": "/docs/legacy",
+      "destination": "/docs/legacy.html"
+    },
+    {
+      "source": "/docs/mcp",
+      "destination": "/docs/mcp.html"
+    },
+    {
+      "source": "/docs/monorepo",
+      "destination": "/docs/monorepo.html"
+    },
+    {
+      "source": "/docs/react-19",
+      "destination": "/docs/react-19.html"
+    },
+    {
+      "source": "/docs/registry",
+      "destination": "/docs/registry.html"
+    },
+    {
+      "source": "/docs/tailwind-v4",
+      "destination": "/docs/tailwind-v4.html"
+    },
+    {
+      "source": "/docs/theming",
+      "destination": "/docs/theming.html"
+    },
+    {
+      "source": "/docs/v0",
+      "destination": "/docs/v0.html"
+    },
+    {
+      "source": "/examples/dashboard",
+      "destination": "/examples/dashboard.html"
+    },
+    {
+      "source": "/examples/tasks",
+      "destination": "/examples/tasks.html"
+    },
+    {
+      "source": "/examples/playground",
+      "destination": "/examples/playground.html"
+    },
+    {
+      "source": "/examples/authentication",
+      "destination": "/examples/authentication.html"
+    },
+    {
+      "source": "/blocks/authentication",
+      "destination": "/blocks/authentication.html"
+    },
+    {
+      "source": "/blocks/login",
+      "destination": "/blocks/login.html"
+    },
+    {
+      "source": "/blocks/sidebar",
+      "destination": "/blocks/sidebar.html"
+    },
+    {
+      "source": "/blocks/calendar",
+      "destination": "/blocks/calendar.html"
+    },
+    {
+      "source": "/charts/area",
+      "destination": "/charts/area.html"
+    },
+    {
+      "source": "/charts/bar",
+      "destination": "/charts/bar.html"
+    },
+    {
+      "source": "/charts/line",
+      "destination": "/charts/line.html"
+    },
+    {
+      "source": "/charts/pie",
+      "destination": "/charts/pie.html"
+    },
+    {
+      "source": "/charts/radar",
+      "destination": "/charts/radar.html"
+    },
+    {
+      "source": "/charts/radial",
+      "destination": "/charts/radial.html"
+    },
+    {
+      "source": "/charts/tooltip",
+      "destination": "/charts/tooltip.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
