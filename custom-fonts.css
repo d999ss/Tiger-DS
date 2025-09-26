@@ -115,7 +115,18 @@ h1, h2, h3, h4, h5, h6,
 .text-3xl, .text-2xl, .text-xl,
 .font-semibold, .font-bold,
 [class*="heading"], [class*="title"],
-.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
+.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter,
+.text-primary {
   font-family: var(--font-neuropa) !important;
   /* Color will be handled by custom-theme.css */
+}
+
+/* Specific targeting for the main headline */
+h1.text-primary.leading-tighter {
+  font-family: var(--font-neuropa) !important;
+}
+
+/* Ensure all headline elements use Neuropa */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-neuropa) !important;
 }
