@@ -1,0 +1,107 @@
+/* Tiger BioSciences Custom Theme - Light Mode with Red Accents */
+
+:root {
+  /* Red accent colors for Tiger BioSciences */
+  --primary: 220 38 38; /* Red-600 */
+  --primary-foreground: 255 255 255; /* White */
+  
+  --destructive: 220 38 38; /* Red-600 */
+  --destructive-foreground: 255 255 255; /* White */
+  
+  --accent: 239 68 68; /* Red-500 */
+  --accent-foreground: 255 255 255; /* White */
+  
+  /* Light mode colors */
+  --background: 255 255 255; /* White */
+  --foreground: 15 23 42; /* Slate-900 */
+  
+  --card: 255 255 255; /* White */
+  --card-foreground: 15 23 42; /* Slate-900 */
+  
+  --popover: 255 255 255; /* White */
+  --popover-foreground: 15 23 42; /* Slate-900 */
+  
+  --muted: 241 245 249; /* Slate-100 */
+  --muted-foreground: 100 116 139; /* Slate-500 */
+  
+  --border: 226 232 240; /* Slate-200 */
+  --input: 226 232 240; /* Slate-200 */
+  
+  --ring: 220 38 38; /* Red-600 */
+  
+  --radius: 0.5rem;
+}
+
+/* Ensure light mode is the default */
+html {
+  color-scheme: light;
+}
+
+/* Override any dark mode styles */
+.dark {
+  --primary: 220 38 38; /* Keep red in dark mode too */
+  --primary-foreground: 255 255 255;
+  
+  --destructive: 220 38 38;
+  --destructive-foreground: 255 255 255;
+  
+  --accent: 239 68 68;
+  --accent-foreground: 255 255 255;
+  
+  --background: 15 23 42; /* Slate-900 */
+  --foreground: 248 250 252; /* Slate-50 */
+  
+  --card: 15 23 42; /* Slate-900 */
+  --card-foreground: 248 250 252; /* Slate-50 */
+  
+  --popover: 15 23 42; /* Slate-900 */
+  --popover-foreground: 248 250 252; /* Slate-50 */
+  
+  --muted: 30 41 59; /* Slate-800 */
+  --muted-foreground: 148 163 184; /* Slate-400 */
+  
+  --border: 51 65 85; /* Slate-700 */
+  --input: 51 65 85; /* Slate-700 */
+  
+  --ring: 220 38 38; /* Red-600 */
+}
+
+/* Force light mode by default */
+body {
+  background-color: rgb(255 255 255);
+  color: rgb(15 23 42);
+}
+
+/* Red accent for buttons and interactive elements */
+[data-slot="button"]:not([class*="bg-"]) {
+  background-color: rgb(220 38 38);
+  color: rgb(255 255 255);
+}
+
+[data-slot="button"]:not([class*="bg-"]):hover {
+  background-color: rgb(185 28 28); /* Red-700 */
+}
+
+/* Red accent for links */
+a:not([class*="text-"]) {
+  color: rgb(220 38 38);
+}
+
+a:not([class*="text-"]):hover {
+  color: rgb(185 28 28); /* Red-700 */
+}
+
+/* Red accent for primary text */
+.text-primary {
+  color: rgb(220 38 38) !important;
+}
+
+/* Red accent for borders */
+.border-primary {
+  border-color: rgb(220 38 38) !important;
+}
+
+/* Red accent for focus rings */
+.focus-visible:ring-ring {
+  --tw-ring-color: rgb(220 38 38);
+}
