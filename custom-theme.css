@@ -106,30 +106,41 @@ a:not([class*="text-"]):hover {
   --tw-ring-color: rgb(220 38 38);
 }
 
-/* Red headlines - Override all heading elements */
+/* Headlines should use normal text color, not red */
 h1, h2, h3, h4, h5, h6 {
-  color: rgb(220 38 38) !important; /* Red-600 */
+  color: rgb(15 23 42) !important; /* Slate-900 for light mode */
 }
 
-/* Specific headline classes */
+/* Specific headline classes - use normal text color */
 .text-4xl, .text-5xl, .text-6xl,
 .text-3xl, .text-2xl, .text-xl,
 .font-semibold, .font-bold,
 .leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
-  color: rgb(220 38 38) !important; /* Red-600 */
+  color: rgb(15 23 42) !important; /* Slate-900 for light mode */
 }
 
-/* Main page headline */
+/* Main page headline - use normal text color */
 .text-primary {
-  color: rgb(220 38 38) !important;
+  color: rgb(15 23 42) !important; /* Slate-900 for light mode */
 }
 
 /* Override any existing text color classes for headlines */
 [class*="heading"], [class*="title"] {
-  color: rgb(220 38 38) !important;
+  color: rgb(15 23 42) !important; /* Slate-900 for light mode */
 }
 
-/* Ensure primary color is used for main headlines */
+/* Ensure proper text color for main headlines */
 .leading-tighter {
-  color: rgb(220 38 38) !important;
+  color: rgb(15 23 42) !important; /* Slate-900 for light mode */
+}
+
+/* Dark mode headlines */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+.dark .text-4xl, .dark .text-5xl, .dark .text-6xl,
+.dark .text-3xl, .dark .text-2xl, .dark .text-xl,
+.dark .font-semibold, .dark .font-bold,
+.dark .leading-tighter, .dark .text-balance, .dark .tracking-tight, .dark .tracking-tighter,
+.dark .text-primary,
+.dark [class*="heading"], .dark [class*="title"] {
+  color: rgb(248 250 252) !important; /* Slate-50 for dark mode */
 }

@@ -117,5 +117,5 @@ h1, h2, h3, h4, h5, h6,
 [class*="heading"], [class*="title"],
 .leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
   font-family: var(--font-neuropa) !important;
-  color: rgb(220 38 38) !important; /* Red-600 for headlines */
+  /* Color will be handled by custom-theme.css */
 }
