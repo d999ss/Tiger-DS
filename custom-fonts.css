@@ -1,0 +1,99 @@
+/* Custom Fonts for Tiger-DS */
+
+/* Neuropa Font - For Headlines */
+@font-face {
+  font-family: 'Neuropa';
+  src: url('./fonts/Neuropa-Medium.otf') format('opentype'),
+       url('./fonts/Neuropa-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Alexandria Font - For Body Text */
+@font-face {
+  font-family: 'Alexandria';
+  src: url('./fonts/Alexandria-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alexandria';
+  src: url('./fonts/Alexandria-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font Fallbacks */
+@font-face {
+  font-family: 'Neuropa Fallback';
+  src: local('Arial'), local('Helvetica'), local('sans-serif');
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 105%;
+}
+
+@font-face {
+  font-family: 'Alexandria Fallback';
+  src: local('Arial'), local('Helvetica'), local('sans-serif');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 108%;
+}
+
+/* CSS Variables for Custom Fonts */
+:root {
+  --font-neuropa: 'Neuropa', 'Neuropa Fallback', 'Arial', sans-serif;
+  --font-alexandria: 'Alexandria', 'Alexandria Fallback', 'Arial', sans-serif;
+}
+
+/* Override existing font variables */
+.__variable_188709 {
+  --font-sans: var(--font-alexandria);
+}
+
+/* Apply Neuropa to headlines */
+h1, h2, h3, h4, h5, h6,
+.text-4xl, .text-5xl, .text-6xl,
+.text-3xl, .text-2xl, .text-xl,
+.font-semibold, .font-bold,
+[class*="heading"], [class*="title"] {
+  font-family: var(--font-neuropa) !important;
+}
+
+/* Apply Alexandria to body text */
+body, p, span, div, a, button, input, textarea, select,
+.text-sm, .text-base, .text-lg,
+.font-normal, .font-medium {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* Specific overrides for shadcn/ui components */
+.text-primary, .text-foreground, .text-muted-foreground {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* Headlines and titles */
+.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
+  font-family: var(--font-neuropa) !important;
+}
+
+/* Navigation and buttons */
+nav a, .inline-flex, button {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* Cards and content areas */
+[data-slot="card-title"], [data-slot="card-description"] {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* Ensure proper font loading */
+.font-sans {
+  font-family: var(--font-alexandria) !important;
+}
