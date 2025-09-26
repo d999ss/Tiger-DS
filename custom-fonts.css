@@ -1,4 +1,4 @@
-/* Custom Fonts for Tiger-DS */
+/* Custom Fonts for Tiger-DS - Clean and Consistent */
 
 /* Neuropa Font - For Headlines */
 @font-face {
@@ -27,29 +27,10 @@
   font-display: swap;
 }
 
-/* Font Fallbacks */
-@font-face {
-  font-family: 'Neuropa Fallback';
-  src: local('Arial'), local('Helvetica'), local('sans-serif');
-  ascent-override: 95%;
-  descent-override: 25%;
-  line-gap-override: 0%;
-  size-adjust: 105%;
-}
-
-@font-face {
-  font-family: 'Alexandria Fallback';
-  src: local('Arial'), local('Helvetica'), local('sans-serif');
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-  size-adjust: 108%;
-}
-
 /* CSS Variables for Custom Fonts */
 :root {
-  --font-neuropa: 'Neuropa', 'Neuropa Fallback', 'Arial', sans-serif;
-  --font-alexandria: 'Alexandria', 'Alexandria Fallback', 'Arial', sans-serif;
+  --font-neuropa: 'Neuropa', 'Arial', sans-serif;
+  --font-alexandria: 'Alexandria', 'Arial', sans-serif;
 }
 
 /* Override existing font variables */
@@ -57,40 +38,45 @@
   --font-sans: var(--font-alexandria);
 }
 
-/* Apply Neuropa to headlines */
+/* Set default font for entire document */
+html, body {
+  font-family: var(--font-alexandria) !important;
+}
+
+/* NEUROPA FONT - For Headlines Only */
 h1, h2, h3, h4, h5, h6,
 .text-4xl, .text-5xl, .text-6xl,
 .text-3xl, .text-2xl, .text-xl,
 .font-semibold, .font-bold,
-[class*="heading"], [class*="title"] {
+[class*="heading"], [class*="title"],
+.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter,
+.text-primary,
+/* Specific headline classes */
+h1.text-primary.leading-tighter,
+/* Large numbers in cards */
+.text-3xl.font-semibold,
+/* Main page headline */
+.max-w-4xl {
   font-family: var(--font-neuropa) !important;
 }
 
-/* Apply Alexandria to body text */
-body, p, span, div, a, button, input, textarea, select,
+/* ALEXANDRIA FONT - For All Body Text */
+p, span, div, a, button, input, textarea, select,
 .text-sm, .text-base, .text-lg,
 .font-normal, .font-medium,
-.text-foreground, .text-muted-foreground {
-  font-family: var(--font-alexandria) !important;
-}
-
-/* Specific overrides for shadcn/ui components */
-.text-primary, .text-foreground, .text-muted-foreground {
-  font-family: var(--font-alexandria) !important;
-}
-
-/* Headlines and titles */
-.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
-  font-family: var(--font-neuropa) !important;
-}
-
+.text-foreground, .text-muted-foreground,
+.text-secondary, .text-muted,
 /* Navigation and buttons */
-nav a, .inline-flex, button {
-  font-family: var(--font-alexandria) !important;
-}
-
+nav a, .inline-flex, button,
 /* Cards and content areas */
-[data-slot="card-title"], [data-slot="card-description"] {
+[data-slot="card-title"], [data-slot="card-description"],
+[data-slot="card-description"],
+/* Specific targeting for subtitle/description text */
+.text-balance, .max-w-3xl, .text-center p,
+/* Theme selectors and labels */
+.text-xs, .text-2xs,
+/* All other text elements */
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.text-4xl):not(.text-5xl):not(.text-6xl):not(.text-3xl):not(.text-2xl):not(.text-xl):not(.font-semibold):not(.font-bold):not([class*="heading"]):not([class*="title"]):not(.leading-tighter):not(.text-balance):not(.tracking-tight):not(.tracking-tighter):not(.text-primary) {
   font-family: var(--font-alexandria) !important;
 }
 
@@ -99,34 +85,7 @@ nav a, .inline-flex, button {
   font-family: var(--font-alexandria) !important;
 }
 
-/* Specific targeting for subtitle/description text */
-.text-balance, .max-w-3xl, .text-center p {
+/* Override any conflicting font classes */
+[class*="font-"]:not(.font-semibold):not(.font-bold) {
   font-family: var(--font-alexandria) !important;
-}
-
-/* Override any remaining text elements */
-* {
-  font-family: var(--font-alexandria) !important;
-}
-
-/* Re-apply Neuropa to headlines after the universal selector */
-h1, h2, h3, h4, h5, h6,
-.text-4xl, .text-5xl, .text-6xl,
-.text-3xl, .text-2xl, .text-xl,
-.font-semibold, .font-bold,
-[class*="heading"], [class*="title"],
-.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter,
-.text-primary {
-  font-family: var(--font-neuropa) !important;
-  /* Color will be handled by custom-theme.css */
-}
-
-/* Specific targeting for the main headline */
-h1.text-primary.leading-tighter {
-  font-family: var(--font-neuropa) !important;
-}
-
-/* Ensure all headline elements use Neuropa */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-neuropa) !important;
 }
