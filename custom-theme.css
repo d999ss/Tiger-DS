@@ -105,3 +105,31 @@ a:not([class*="text-"]):hover {
 .focus-visible:ring-ring {
   --tw-ring-color: rgb(220 38 38);
 }
+
+/* Red headlines - Override all heading elements */
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(220 38 38) !important; /* Red-600 */
+}
+
+/* Specific headline classes */
+.text-4xl, .text-5xl, .text-6xl,
+.text-3xl, .text-2xl, .text-xl,
+.font-semibold, .font-bold,
+.leading-tighter, .text-balance, .tracking-tight, .tracking-tighter {
+  color: rgb(220 38 38) !important; /* Red-600 */
+}
+
+/* Main page headline */
+.text-primary {
+  color: rgb(220 38 38) !important;
+}
+
+/* Override any existing text color classes for headlines */
+[class*="heading"], [class*="title"] {
+  color: rgb(220 38 38) !important;
+}
+
+/* Ensure primary color is used for main headlines */
+.leading-tighter {
+  color: rgb(220 38 38) !important;
+}
