@@ -67,9 +67,53 @@ html {
 }
 
 /* Force light mode by default */
+html {
+  color-scheme: light !important;
+}
+
+html.dark {
+  color-scheme: light !important;
+}
+
 body {
-  background-color: rgb(255 255 255);
-  color: rgb(15 23 42);
+  background-color: rgb(255 255 255) !important;
+  color: rgb(15 23 42) !important;
+}
+
+/* Force light mode on all elements */
+* {
+  background-color: inherit;
+}
+
+/* Override dark mode completely */
+.dark {
+  --background: 255 255 255 !important; /* Force white background */
+  --foreground: 15 23 42 !important; /* Force dark text */
+  --card: 255 255 255 !important;
+  --card-foreground: 15 23 42 !important;
+  --popover: 255 255 255 !important;
+  --popover-foreground: 15 23 42 !important;
+  --muted: 241 245 249 !important;
+  --muted-foreground: 100 116 139 !important;
+  --border: 226 232 240 !important;
+  --input: 226 232 240 !important;
+}
+
+/* Force light mode classes */
+.bg-background {
+  background-color: rgb(255 255 255) !important;
+}
+
+.text-foreground {
+  color: rgb(15 23 42) !important;
+}
+
+.bg-card {
+  background-color: rgb(255 255 255) !important;
+}
+
+.text-card-foreground {
+  color: rgb(15 23 42) !important;
 }
 
 /* Red accent for buttons and interactive elements */
